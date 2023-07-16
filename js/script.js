@@ -17,7 +17,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height) {
                 navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[hred*=' + id + ']').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
         }
     });
@@ -25,6 +25,8 @@ window.onscroll = () => {
     let header = document.querySelector('header');
 
     header.classList.toggle('sticky', window.scrollY > 100);
+
+    
 
     // remove toggle icon and navbar when click navbar links (scroll)
 
