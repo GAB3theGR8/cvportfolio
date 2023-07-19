@@ -579,8 +579,12 @@ span {
 }
 
 .portfolio .webProject .image {
-    width: 100%;
+    width: 50%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolioRow {
