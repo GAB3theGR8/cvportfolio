@@ -555,6 +555,63 @@ span {
     width: 20%;
 }
 
+.portfolio {
+    display: block;
+    width:100%
+    margin: 0 auto;
+}
+
+.portfolio h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.portfolio .heading {
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.portfolio span {
+    color: var(--main-color);
+}
+
+.portfolio .webProject .image {
+    width: 100%;
+    height: auto;
+}
+
+.portfolioRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0px;
+}
+
+.portfolioRow .image {
+    width: 400px;
+    height: auto;
+    border: 10px solid #fff;
+}
+
+.portfolioRow2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.portfolioRow2 .image {
+    width: 400px;
+    height: auto;
+    border: 10px solid #fff;
+}
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
