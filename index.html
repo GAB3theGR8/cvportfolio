@@ -53,9 +53,8 @@
         </div>        
 
         <div class="home-sci">
-            <a href=""><i class="bx bxl-facebook"></i></a>
-            <a href=""><i class="bx bxl-twitter"></i></a>
-            <a href=""><i class="bx bxl-linkedin"></i></a> 
+            <a href="https://github.com/GAB3theGR8"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/gabeeaster"><i class="bx bxl-linkedin"></i></a> 
             <span class="animate" style="--i:6"></span>           
         </div>
 
@@ -76,12 +75,12 @@
 
         <div class="about-content">
             <h3>Front End Developer<span class="animate scroll" style="--i:3"></span></h3>
-            <p>As an experienced front end developer of 10+ years, I possess an impressive myriad of skills ranging from HTML, CSS, JavaScript, React, Tailwind, and SCSS. My passion is to design and maintain responsive websites that offer a silky smooth user experience. My expertise lies in writing clean code to craft dynamic, engaging interfaces and adapting to utilize cutting-edge technology and methods. I'm a strong team player who loves to collaborate and am very comfortable working independently to produce outstanding websites and web-based applications. I have just recently moved to Cork from Memphis, TN and possess a Stamp 4 visa which allows me to work in Ireland.
+            <p>As an experienced front end developer of 10+ years, I possess a myriad of skills ranging from HTML, CSS, JavaScript, React, Tailwind, and SCSS. My passion is to design and maintain responsive websites that offer a silky smooth user experience. My expertise lies in writing clean code to craft dynamic, engaging interfaces and adapting to utilize cutting-edge technology and methods. I'm a strong team player who loves to collaborate and am very comfortable working independently to produce outstanding websites and web-based applications. I have just recently moved to Cork from Memphis, TN and possess a Stamp 4 visa which allows me to work in Ireland.
             <span class="animate scroll" style="--i:4"></span>
             </p>
 
             <div class="btn-box btns">
-                <a href="#" class="btn">Read More</a>
+                <a href="documents/Gabriel_Easter_CV.docx" class="btn">Read More</a>
                 <span class="animate scroll" style="--i:5"></span>
             </div>
         </div>
@@ -216,27 +215,57 @@
 
     <section class="portfolio" id="portfolio">
         <h2 class="heading">My <span>Portfolio</span></h2>
-        <div class="webProject">   
-            <h2>Websites</h2>
-            <a href="https://classy-pie-a9d8ff.netlify.app/">
-                <img class="image" src="/images/ecommerce_thumbnail.png" />
-            </a>
-        </div>
-
-            <div class="portfolioRow">
-                <div class="imageRow">
-                    <img class="image" src="/images/composite3.jpg" />
-                    <img class="image" src="/images/composite1.jpg" />
+        <div class="portfolioColumn">
+            <h3 class="title">eCommerce Website</h3>
+            <p>An eCommerce website that offers a shopping experience with pay flow incorporating React, React Redux, Strapi, and Stripe APIs.</p>
+            <h3 class="title">Tech Stack</h3>
+                <div class="techStack">
+                    <i class="bx bxl-react"></i>
+                    <i class="bx bxl-redux"></i>
+                    <i class="bx bxl-tailwind-css"></i>
+                    <i class="bx bxl-stripe"></i>
+                </div>
+                <div class="btn-box">
+                    <a href="#" class="btn">Code</a>
+                    <a href="#contact" class="btn">Demo</a>
+                </div>
+                <div class="portfolioImg">
+                    <img src="images/ecommerce_thumbnail.png">
+                </div>
+                <h3 class="title">Photoshop</h3>
+                <div class="container">
+                    <div class="image-container">
+                        <div class="image"><img src="images/composite3.jpg"></div>
+                        <div class="image"><img src="images/composite1.jpg"></div>
+                        <div class="image"><img src="images/composite2.jpg"></div>
+                        <div class="image"><img src="images/composite4.jpg"></div>
+                    </div>
+                    <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="" alt="">
+                    </div> 
                 </div>
             </div>
-            <div class="portfolioRow2">
-                <div class="imageRow">
-                    <img class="image" src="/images/composite2.jpg" />
-                    <img class="image" src="/images/composite4.jpg" />
+        </section>        
+            <section class="graphicDesign">
+                <div class="heading">
+                    <h3 class="title">Graphic Design</h3>
                 </div>
-            </div>
-
-    </section>
+                    <div class="logo-container">
+                        <div class="image-container">
+                            <div class="image"><img src="images/logo1.png"></div>
+                            <div class="image"><img src="images/logo2.png"></div>
+                            <div class="image"><img src="images/logo3.png"></div>
+                            <div class="image"><img src="images/logo4.png"></div>
+                            <div class="image"><img src="images/logo5.png"></div>
+                            <div class="image"><img src="images/logo6.png"></div>                            
+                        </div>
+                        <div class="popup-image">
+                            <span>&times;</span>
+                            <img src="" alt="">
+                        </div> 
+                    </div>
+            </section>
 
     <!-- contact section design -->
 
@@ -300,6 +329,31 @@
             <span class="animate scroll" style="--i:3"></span>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display='block'
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+
+        document.querySelectorAll('.logo-container img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display='block'
+                document.querySelector('.popup-image').style.background='rgba(100,100,100,1)'
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
 
     <script src="js/script.js"></script>
 </body>

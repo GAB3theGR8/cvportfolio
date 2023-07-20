@@ -556,64 +556,216 @@ span {
 }
 
 .portfolio {
-    display: block;
-    width:100%
-    margin: 0 auto;
-}
-
-.portfolio h2 {
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.portfolio .heading {
-    position: relative;
-    font-size: 5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-.portfolio span {
-    color: var(--main-color);
-}
-
-.portfolio .webProject .image {
-    width: 50%;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: auto;
+    background: var(--bg-color);
+    padding-bottom: 5rem;
 }
 
-.portfolioRow {
+.portfolioColumn {    
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    padding: 0px;
-}
-
-.portfolioRow .image {
-    width: 400px;
-    height: auto;
-    border: 10px solid #fff;
-}
-
-.portfolioRow2 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
-    padding: 0px;
 }
 
-.portfolioRow2 .image {
-    width: 400px;
-    height: auto;
-    border: 10px solid #fff;
+.portfolio .heading {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.portfolioColumn .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.portfolioImg {
+    position: relative;
+    width: 40rem;
+    height: 25rem;
+    border-radius: 50%;
+}
+
+.portfolioImg img {
+    width: 100%;
+    border-radius: 5px;
+    border: .2rem solid var(--main-color);
+}
+
+.portfolioColumn p {
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.techStack {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.techStack i {
+    font-size: 30px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .image-container .image {
+    height: 250px;
+    width: 350px;
+    border: .2rem solid var(--main-color);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.container .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container .popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--main-color);
+    border-radius: 5px;
+    width: 750px;
+}
+
+.graphicDesign {
+    background: var(--second-bg-color);
+}
+
+.graphicDesign .heading {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.graphicDesign .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.logo-container .image-container .image {
+    height: 250px;
+    width: 350px;
+    border: .2rem solid var(--main-color);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.logo-container .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.logo-container .image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.logo-container .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(100, 100, 100, 1);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container .popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.logo-container .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--main-color);
+    border-radius: 5px;
+    width: 750px;
 }
 
 .contact {
@@ -945,6 +1097,19 @@ section:nth-child(odd) .animate.scroll,
         pointer-events: none;
         background: var(--bg-color);
         opacity: .6;
+    }
+
+    .techStack {
+        width: 80%;
+    }
+
+    .container .image-container .image {
+        width: 320px;
+        height: auto;
+    }
+
+    .container .popup-image img {
+        width: 90%;
     }
 }
 
