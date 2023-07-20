@@ -702,7 +702,7 @@ span {
 
 .logo-container {
     position: relative;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -716,8 +716,8 @@ span {
 }
 
 .logo-container .image-container .image {
-    height: 250px;
-    width: 350px;
+    height: 80%;
+    width: auto;
     border: .2rem solid var(--main-color);
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
