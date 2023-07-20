@@ -646,6 +646,7 @@ span {
     width: 100%;
     object-fit: cover;
     transition: .2s linear;
+    cursor: pointer;
 }
 
 .container .image-container .image:hover img {
